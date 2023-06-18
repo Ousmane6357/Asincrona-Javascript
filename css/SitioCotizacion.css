@@ -1,0 +1,40 @@
+body{
+    background-color: burlywood;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.logo img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+
+}
+
+.espera img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.cuadro{
+    background-color: brown;
+    border-radius: 5%;
+    margin: 10px;
+    color: antiquewhite;
+
+}
+
+.cuadro div{
+    margin: 20px;
+}

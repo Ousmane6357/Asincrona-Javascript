@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // CALLBACKS
+      // function sumarNumero(a,b,callbacks){
+      //     setTimeout(function(){
+      //         if(typeof a != 'number' || typeof b != 'number'){
+      //             return callbacks(new Error('Algun argumento no es numero'));
+
+      //         }
+      //         callbacks(null , a+b)
+      //     }, 1000);
+      // }
+      // sumarNumero(3,5, function(error, resulatado){
+      //     if (error){
+      //         console.log(error);
+      //     } else{
+      //         console.log(resulatado)
+      //     }
+      // });
+
+      ////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////////////
+      // // PROMESA
+      // function sumarNumero(a,b){
+      //     return new Promise(function(resolve,reject){
+      //         setTimeout(function(){
+      //             if(typeof a != 'number' || typeof b != 'number'){
+      //                 reject(new Error('Ambos argumentos deben ser números'));
+      //             }else{
+      //                 resolve(a+b);
+      //             }
+      //      }, 1000);
+      //     })
+
+      // }
+      // sumarNumero(3,'5')
+      // .then(function(resulatado){
+      //     console.log(resulatado);
+      // }).catch(function(error){
+      //     console.error(error);
+      // })
+
+      ////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////
+
+      // ASYNC/AWAIT
+      async function sumarNumero(a, b) {
+        if (typeof a != "number" || typeof b != "number") {
+          throw new Error("Algunos de los elementos no es numeros");
+        }
+        return a + b;
+      } 
+      async function manejarErrores() {
+        try {
+          let resulatado = await sumarNumero(2, 3);
+          console.log(resulatado);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+      manejarErrores();
+    </script>
+  </body>
+</html>
